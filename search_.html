@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Delivery</title>
+    <link rel="stylesheet" href="assets/css/swiper.min.css">
+    <link rel="stylesheet" href="assets/css/main.min.css">
+    <style>
+        .search-txt-custom {
+
+            width: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container container--px">
+            <nav class="header__menu">
+                <a href="index.html" class="logo"><img src="assets/images/logo.png" alt="almas-logo" width="100"></a>
+                <a href="#" id="top-orderbtn">Order Now</a>
+                <div class="cart-count">
+                    <div class="count">10</div>
+                </div>
+                <a href="search.html" class="search" id="search-bar">
+                    <input class="search-txt search-txt-custom d-none" type="text" placeholder="Search..." disabled />
+                    <button class="submit"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15"
+                            fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                            <path
+                                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                        </svg></button>
+                </a>
+                <div id="menu-bar"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                        class="w-6 h-6">
+                        <path fill-rule="evenodd"
+                            d="M3 6.75A.75.75 0 013.75 6h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 6.75zM3 12a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 12zm0 5.25a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </div>
+                <ul class="menu-list">
+                    <button id="menuCloseBtn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                            fill="currentColor" class="w-6 h-6">
+                            <path fill-rule="evenodd"
+                                d="M5.47 5.47a.75.75 0 011.06 0L12 10.94l5.47-5.47a.75.75 0 111.06 1.06L13.06 12l5.47 5.47a.75.75 0 11-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 01-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 010-1.06z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </button>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="support.html">Support</a></li>
+                    <li><a href="order.html">Menu</a></li>
+                    <li><a href="offers.html">Offers</a></li>
+                    <li><a href="contact-us.html">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+
+       <div class="search-wrapper">
+         <!-- search bar section -->
+
+         <section class="search-sec">
+            <div class="container container--pb0">
+                <div class="search-bar">
+                    <div class="search" id="search-bar">
+                        <input class="search-txt" type="text" placeholder="Search..." id="search-input" />
+                        <button class="submit" id="search-icon"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15"
+                                fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                <path
+                                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                            </svg></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- search bar section end -->
+
+
+        <!-- Recent Search Section -->
+
+        <section class="recent-search">
+            <div class="container container--pb0">
+                <h3>Recent Search</h3>
+                <div class="recent-search__div">
+                    <ul>
+                        <li><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15"
+                            fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                            <path
+                                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                        </svg><a href="#">Burger</a></li>
+                        <li><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15"
+                            fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                            <path
+                                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                        </svg><a href="#">Biriyani</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recent Search Section end-->
+
+
+        <!-- Popular Cusines Section -->
+
+        <section class="search-cusines">
+            <div class="container container--pt0">
+                <h3>Popular Cuisines</h3>
+                <div class="cusines-grid">
+                    <div class="cusines-card">
+                        <img src="assets/images/dishes/sp1.png" alt="">
+                        <p class="cusines-name">Indian</p>
+                    </div>
+                    <div class="cusines-card">
+                        <img src="assets/images/dishes/sp1.png" alt="">
+                        <p class="cusines-name">Arabian</p>
+                    </div>
+                    <div class="cusines-card">
+                        <img src="assets/images/dishes/sp1.png" alt="">
+                        <p class="cusines-name">Asian</p>
+                    </div>
+                    <div class="cusines-card">
+                        <img src="assets/images/dishes/sp1.png" alt="">
+                        <p class="cusines-name">American</p>
+                    </div>
+                    <div class="cusines-card">
+                        <img src="assets/images/dishes/sp1.png" alt="">
+                        <p class="cusines-name">African</p>
+                    </div>
+                    <div class="cusines-card">
+                        <img src="assets/images/dishes/sp1.png" alt="">
+                        <p class="cusines-name">European</p>
+                    </div>
+                    <div class="cusines-card">
+                        <img src="assets/images/dishes/sp1.png" alt="">
+                        <p class="cusines-name">Latin American</p>
+                    </div>
+                    <div class="cusines-card">
+                        <img src="assets/images/dishes/sp1.png" alt="">
+                        <p class="cusines-name">Caribbean</p>
+                    </div>
+                    <div class="cusines-card">
+                        <img src="assets/images/dishes/sp1.png" alt="">
+                        <p class="cusines-name">Asian</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Popular Cusines Section -->
+
+        <!-- Search Result Section -->
+
+        <section class="search-result">
+            <div class="container container--pall">
+                <ul class="search-output">
+                    <li>
+                        <a href="detail-search.html">
+                            <img src="assets/images/dishes/sp1.png" alt="">
+                         <div class="item-detail">
+                            <p class="item-name">Chicken Biriyani</p>
+                            <small class="price">$12</small>
+                        </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="detail-search.html">
+                            <img src="assets/images/dishes/sp1.png" alt=""> 
+                        <div class="item-detail">
+                            <p class="item-name">Mutton Biriyani</p>
+                            <small class="price">$12</small>
+                        </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="detail-search.html">
+                            <img src="assets/images/dishes/sp1.png" alt=""> 
+                        <div class="item-detail">
+                            <p class="item-name">Beef Biriyani</p>
+                            <small class="price">$12</small>
+                        </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Search Result Section end -->
+
+       </div>
+
+    </main>
+    <!-- footer -->
+
+    <footer>
+        <div class="container container--pall">
+            <div class="footer">
+                <a href="#" class="footer__logo"><img src="assets/images/logo.png" alt="logo"></a>
+                <hr>
+                <div class="footer__grid">
+                    <div class="footer__location-card">
+                        <h3>Menu</h3>
+                        <ul>
+                            <li><a href="#">Veg</a></li>
+                            <li><a href="#">Non-Veg</a></li>
+                            <li><a href="#">Burger</a></li>
+                            <li><a href="#">Deserts</a></li>
+                            <li><a href="#">Cafe</a></li>
+                            <li><a href="#">Beverages</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__location-card">
+                        <h3>Restaurant</h3>
+                        <ul>
+                            <li><a href="aboutus.html">About Us</a></li>
+                            <li><a href="#">Menu</a></li>
+                            <li><a href="#">Branches</a></li>
+                            <li><a href="#">Offers</a></li>
+                            <li><a href="#">Bag</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__location-card">
+                        <h3>Branches</h3>
+                        <ul>
+                            <li><a href="#">Veg</a></li>
+                            <li><a href="#">Non-Veg</a></li>
+                            <li><a href="#">Burger</a></li>
+                            <li><a href="#">Deserts</a></li>
+                            <li><a href="#">Cafe</a></li>
+                            <li><a href="#">Beverages</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__location-card">
+                        <h3>Support</h3>
+                        <ul>
+                            <li><a href="#">Veg</a></li>
+                            <li><a href="#">Non-Veg</a></li>
+                            <li><a href="#">Burger</a></li>
+                            <li><a href="#">Deserts</a></li>
+                            <li><a href="#">Cafe</a></li>
+                            <li><a href="#">Beverages</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__location-card">
+                        <h3>Follow Us</h3>
+                        <ul class="footer__social">
+                            <li><a href="#"><svg id="Layer_1" width="24" height="24" data-name="Layer 1"
+                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22.98 22.98">
+                                        <path
+                                            d="M12,2A10,10,0,1,1,2,12,10,10,0,0,1,12,2ZM12,.51A11.49,11.49,0,1,0,23.49,12,11.48,11.48,0,0,0,12,.51ZM10,8A1,1,0,1,1,9,7,1,1,0,0,1,10,8Zm0,2H8v6h2Zm3,0H11v6h2V13.14c0-1.72,2-1.88,2,0V16h2V12.64c0-3.28-3.13-3.16-4-1.55V10"
+                                            transform="translate(-0.51 -0.51)" />
+                                    </svg>
+                                </a></li>
+                            <li><a href="#"><svg id="Layer_1" width="24" height="24" data-name="Layer 1"
+                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22.52 22.52">
+                                        <path
+                                            d="M12,2A10,10,0,1,1,2,12,10,10,0,0,1,12,2ZM12,.74A11.26,11.26,0,1,0,23.26,12,11.26,11.26,0,0,0,12,.74ZM10,10H8v2h2v6h3V12h1.82L15,10H13V9.17c0-.48.1-.67.56-.67H15V6H12.6C10.8,6,10,6.79,10,8.31Z"
+                                            transform="translate(-0.74 -0.74)" />
+                                    </svg></a></li>
+                            <li><a href="#"><svg id="Layer_1" width="24" height="24" data-name="Layer 1"
+                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22.52 22.52">
+                                        <path
+                                            d="M12,2A10,10,0,1,1,2,12,10,10,0,0,1,12,2ZM12,.74A11.26,11.26,0,1,0,23.26,12,11.26,11.26,0,0,0,12,.74Zm0,6.34c1.6,0,1.79,0,2.43,0a2.26,2.26,0,0,1,2.46,2.46c0,.63,0,.82,0,2.42s0,1.79,0,2.42a2.26,2.26,0,0,1-2.46,2.46c-.64,0-.83,0-2.43,0s-1.79,0-2.42,0a2.25,2.25,0,0,1-2.46-2.46c0-.63,0-.82,0-2.42s0-1.79,0-2.42A2.25,2.25,0,0,1,9.58,7.12C10.21,7.09,10.4,7.08,12,7.08Zm0-.86c-1.57,0-1.77,0-2.38,0A3.18,3.18,0,0,0,6.26,9.62c0,.61,0,.81,0,2.38s0,1.77,0,2.38a3.18,3.18,0,0,0,3.36,3.36c.61,0,.81,0,2.38,0s1.77,0,2.38,0a3.18,3.18,0,0,0,3.36-3.36c0-.61,0-.81,0-2.38s0-1.77,0-2.38a3.18,3.18,0,0,0-3.36-3.36C13.77,6.23,13.57,6.22,12,6.22Zm0,2.86A2.92,2.92,0,1,0,14.92,12,2.92,2.92,0,0,0,12,9.08ZM12,14a2,2,0,1,1,2-2A2,2,0,0,1,12,14Zm3.2-5.76a.56.56,0,1,0,.56.56A.56.56,0,0,0,15.2,8.24Z"
+                                            transform="translate(-0.74 -0.74)" />
+                                    </svg></a></li>
+                            <li><a href="#"><svg id="Layer_1" width="24" height="24" data-name="Layer 1"
+                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22.73 22.73">
+                                        <path
+                                            d="M12,2A10,10,0,1,1,2,12,10,10,0,0,1,12,2ZM12,.64A11.36,11.36,0,1,0,23.36,12,11.35,11.35,0,0,0,12,.64ZM18.1,9a4.86,4.86,0,0,1-1.32.36,2.29,2.29,0,0,0,1-1.27,5,5,0,0,1-1.46.56,2.29,2.29,0,0,0-3.91,2.09,6.54,6.54,0,0,1-4.74-2.4,2.31,2.31,0,0,0,.71,3.07,2.31,2.31,0,0,1-1-.29A2.31,2.31,0,0,0,9.2,13.43a2.27,2.27,0,0,1-1,0,2.28,2.28,0,0,0,2.14,1.59,4.62,4.62,0,0,1-3.4,1,6.54,6.54,0,0,0,10-5.8A4.81,4.81,0,0,0,18.1,9Z"
+                                            transform="translate(-0.64 -0.64)" />
+                                    </svg></a></li>
+
+                        </ul>
+                    </div>
+                </div>
+                <hr>
+                <div class="footer__copyright">
+                    <p>&copy; 2023 Restaurant</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- footer end -->
+
+    </main>
+    <script src="assets/js/header.js"></script>
+    <script src="assets/js/swiper.min.js"></script>
+    <script>
+        var searchBox = document.getElementById("search-bar");
+        // let topOrderBtn = document.getElementById("top-orderbtn");
+        var Icon = document.getElementsByClassName("submit")[0];
+        Icon.onclick = function () {
+            searchBox.classList.toggle("open");
+            // topOrderBtn.classList.toggle("hide");
+        }
+    </script>
+
+    <script>
+        const searchInput = document.getElementById("search-input");
+        const recentSearch = document.querySelector(".recent-search");
+        const searchIcon = document.getElementById("search-icon");
+        const searchResult = document.querySelector(".search-result");
+        const searchCusines = document.querySelector(".search-cusines");
+
+        searchInput.addEventListener("click",()=>{
+            recentSearch.style.display="block"
+        })
+        searchInput.addEventListener("input",()=>{
+            recentSearch.style.display="none"
+            searchCusines.style.display="none"
+
+            searchResult.style.display="block"
+
+        })
+        // searchIcon.addEventListener("click",()=>{
+        //     recentSearch.style.display="none"
+        //     searchCusines.style.display="none"
+        //     searchResult.style.display="block"
+
+        // })
+
+    </script>
+</body>
+
+</html>

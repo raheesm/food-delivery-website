@@ -1,0 +1,52 @@
+.about {
+  background-image: url('../../assets/images/dot-curve.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 0% 10%;
+
+  @include breakpoint-up(large) {
+    background-size: contain;
+   
+  }
+  &__circles{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    @include breakpoint-up(large){
+      padding-inline:10em;
+     
+    }
+    .img-circle{
+      &:last-child{
+        -ms-flex-item-align: end;
+            align-self: end;
+      }
+    }
+  }
+  &__content {
+    margin-top: 1em;
+    h2{
+      @include breakpoint-up(large) {
+       
+      }
+    }
+    p {
+      text-align: center;
+      @include breakpoint-up(large) {
+       
+        color: $hash-text;
+        line-height: 2em;
+        font-size: 1rem;
+        
+      }
+      @include breakpoint-up(xlarge) {
+        max-width: 90%;
+        line-height: 2em;
+        font-size: inherit;
+      }
+    }
+    .btn{
+      margin-left: 0;
+  }
+  }
+}

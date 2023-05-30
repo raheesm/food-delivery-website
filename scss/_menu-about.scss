@@ -1,0 +1,40 @@
+.menu-about{
+    background-image: url("../images/menu-bnr.jpg");
+    background-size: cover;
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.425);
+    background-blend-mode: soft-light;
+    @include breakpoint-up(large){
+        min-height: 70vh;
+        padding: 4em 0;
+    }
+
+    h2{
+        text-align: left;
+        color: #ffffff;
+        font-weight: 700;
+        @include breakpoint-up(large){
+            max-width: 19ch;
+        }
+    }
+    h3{
+        font-size: 0.9rem;
+        margin-bottom: 1em;
+        @include breakpoint-up(large){
+            font-size: 1.2rem;
+            font-weight: 500;
+        }
+    }
+    p{
+        @include breakpoint-up(large){
+        margin-bottom: 3em;
+        max-width: 60ch;
+        }
+    }
+
+    &__content{
+        @include breakpoint-up(large){
+            width: 50%;
+        }
+    }
+}

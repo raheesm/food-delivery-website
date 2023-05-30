@@ -1,0 +1,123 @@
+.search-sec {
+  .search-bar {
+    @include breakpoint-up(large) {
+      //   padding-inline: 5em;
+    }
+    .search {
+      padding: 0.3em;
+      @include breakpoint-up(large){
+        padding: 0.3em;
+      }
+      .search-txt {
+        width: 100%;
+        cursor: default;
+      }
+      .submit {
+        width: auto;
+        height: auto;
+        background-color: transparent;
+
+        svg {
+          // width: 2;
+          width: 20px;
+          height: 20px;
+          @include breakpoint-up(large) {
+            width: 23px;
+            height: 23px;
+          }
+        }
+      }
+    }
+  }
+}
+.search-wrapper {
+  h3{
+    font-weight: bold;
+  }
+  @include breakpoint-up(large) {
+    padding-inline: 5em;
+  }
+}
+
+// recent search section
+
+.recent-search{
+ 
+  
+  ul{
+    padding-left: 0;
+    li{
+      display: flex;
+      align-items: center;
+      justify-content: start;
+      opacity: 0.75;
+      a{
+        color: #000;
+        margin-left: 1em;
+        font-size: 0.9rem;
+      }
+    }
+  }
+}
+
+// cusines grid section
+.search-cusines {
+  margin-top: 2em;
+  @include breakpoint-up(large) {
+    margin-top: 5em;
+  }
+  .cusines-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    margin-top: 1em;
+    @include breakpoint-up(large) {
+      grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    }
+    .cusines-card {
+      @extend .flex-center-column;
+      img {
+        width: 2em;
+        object-fit: contain;
+        @include breakpoint-up(large) {
+          width: 100%;
+        }
+      }
+      p {
+        margin: 0;
+        font-size: 0.8rem;
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+// search result section
+
+.search-result{
+  display: none;
+  ul{
+    list-style: none;
+    padding-left: 0;
+    li{
+      a{
+        display: flex;
+        align-items: center;
+        gap: 1em;
+        color: black;
+        img{
+          width: 3em;
+        }
+        .item-detail{
+          small{
+            font-size: 0.8rem;
+            margin: 0;
+          }
+          p{
+            margin: 0;
+            line-height: 1;
+          }
+        }
+      }
+    }
+  }
+}

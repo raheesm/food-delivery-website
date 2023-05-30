@@ -1,0 +1,123 @@
+.top-picks{
+    background-color: $bg-lit;
+
+    @include breakpoint-up(large){
+
+        padding: 2em 0;
+    }
+    @include breakpoint-up(xlarge){
+
+        padding: 2em 0 3em 0;
+    }
+    @include breakpoint-up(xxlarge){
+        padding: 5em 0;
+    }
+    h2{
+        text-align: center;
+    }
+    p{
+        @include breakpoint-up(large){
+         font-size: 0.8rem;      
+        }
+        @include breakpoint-up(xxlarge){
+         font-size: 1rem;      
+        }
+    }
+    .dish-name{
+        @include breakpoint-up(large){
+            font-size: 1.3rem;
+        }
+        @include breakpoint-up(xxlarge){
+            font-size: 1.5rem;
+        }
+    }
+    .price-sec{
+        @include breakpoint-up(large){
+            margin-left: 1.5em;
+        }
+    }
+    .dish-price{
+        margin-top: 0;
+        @include breakpoint-up(large){
+            font-size: 1.2rem;
+        }
+        @include breakpoint-up(xlarge){
+            font-size: 1.4rem;
+        }
+        @include breakpoint-up(xxlarge){
+            font-size: 1.6rem;
+        }
+    }
+    &__card{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        justify-items: center;
+        background-color: white;
+        padding: 1em;
+        border-radius: 10px;
+        margin-bottom: 1em;
+        -webkit-box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+                box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+        padding-right: 0.5em;
+        @include breakpoint-up(large){
+         padding: 1.5em;
+         padding-right: 1em;      
+        }
+        @include breakpoint-up(xxlarge){
+         padding: 2em;
+         padding-right: 2em;      
+        }
+        &-img{
+            text-align: center;
+            img{
+                width: 6em;
+                @include breakpoint-up(large){
+                    width: 10em;
+                    margin-top: -30%;
+                    margin-right: -20%;
+                }
+                @include breakpoint-up(xxlarge){
+                    width: 13em;
+                    margin-top: -30%;
+                    margin-right: -20%;
+                }
+            }
+           .stars{
+            
+            -webkit-box-pack: center;
+            
+                -ms-flex-pack: center;
+            
+                    justify-content: center;
+            svg{
+                width: 0.7em;
+                @include breakpoint-up(large){
+                    width: 0.9em;
+                }
+            }
+           }
+        }
+    }
+    &__div{
+        @include breakpoint-up(medium){
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+            gap: 0.5em;
+            margin-top:0;
+        }
+        @include breakpoint-up(large){
+            grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+            gap: 2em;
+            margin-top: 4em;
+        }
+        @include breakpoint-up(xlarge){
+            
+            gap: 6em;
+        }
+    }
+    .btn{
+        @include breakpoint-up(large){
+            font-size: 0.7rem;
+        }
+    }
+}

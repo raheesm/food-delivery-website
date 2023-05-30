@@ -1,0 +1,490 @@
+.hero {
+  height: auto;
+  position: relative;
+  @include breakpoint-up(large){
+    height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+  }
+  @include breakpoint-up(xxlarge){
+    height: 90vh;
+  }
+  h1{
+    @include breakpoint-up(large){
+      max-width: 16.5ch; 
+      margin-bottom: 0.5em;
+      
+    }
+  }
+  &__div{
+    @include breakpoint-up(large){
+      display: grid;
+      grid-template-columns: 3fr 3fr;
+      align-items: center;
+    }
+    @include breakpoint-up(xlarge){
+     display: grid;
+     grid-template-columns: 3fr 4fr;
+
+    }
+  }
+  &__img {
+    position: relative;
+    margin-top: 2em;
+    margin-bottom: 2em;
+
+    @include breakpoint-up(large){
+      margin-top: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      order: 2;
+    }
+    @include breakpoint-up(xlarge){
+     order: 2;
+    }
+  }
+  &__dish{
+
+    @include breakpoint-up(large){
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .swiper {
+      width: 100%;
+      height: 100%;
+    }
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .main-img{
+      background-color: $bg-lit;
+      border-radius: 50%;
+
+    @include breakpoint-up(large){
+        width: 100%;
+        margin: 0 auto;
+        width: 26em;
+      }
+    @include breakpoint-up(xlarge){
+        max-width: 100%;
+        width: 35em;
+        margin: 0 auto;
+      }
+    @include breakpoint-up(xxlarge){
+       
+       
+      }
+    }
+  }
+  &__content{
+ 
+    @include breakpoint-up(large){
+      max-width: 100%;
+      margin-top: -10%;
+    }
+  }
+  &__review{
+    display: flex;
+    align-items: center;
+    margin-top: 1em;
+    position: relative;
+
+    @include breakpoint-up(large){
+      margin-top: 2em;
+    }
+    @include breakpoint-up(xlarge){
+      margin-top: 2.5em;
+    }
+    .img-div{
+      width:40%;
+      @include breakpoint-up(large){
+       width: 22%;
+      }
+      @include breakpoint-up(xlarge){
+       width: 30%;
+      }
+      .imgs{
+        img{
+          position: absolute;
+          top: 0%;
+          @include breakpoint-up(xlarge){
+            width: 3.5em;
+          }
+          &:nth-child(1){
+     
+            left:0%;
+           
+          }
+          &:nth-child(2){
+ 
+            left: 10%;
+            @include breakpoint-up(large){
+              left:5%;
+             }
+            @include breakpoint-up(xlarge){
+              left:7%;
+             }
+          }
+          &:nth-child(3){
+            left:20%;
+            @include breakpoint-up(large){
+              left:10%;
+             }
+            @include breakpoint-up(xlarge){
+              left:15%;
+             }
+          }
+        }
+      }
+    }
+    .content-div{
+      h3{
+        font-size: 1rem;
+        margin: 0;
+        @include breakpoint-up(large){
+          font-size: 1.2rem;
+        }
+      }
+      h4{
+        font-size: 0.8rem;
+        @include breakpoint-up(large){
+          font-size: 1rem;
+        }
+        @include breakpoint-up(xlarge){
+          font-size: 1.2rem;
+        }
+      }
+      .review-count{
+        margin-top: 0.2em;
+        display: flex;
+        align-items: center;
+        gap: 0.3em;
+        svg{
+          fill: $primary;
+        }
+        p{
+          font-size: 0.7rem;
+          opacity: 0.6;
+          margin: 0;
+          @include breakpoint-up(large){
+            font-size: 0.9rem;
+          }
+          @include breakpoint-up(xlarge){
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+  }
+  &__btns{
+
+    @include breakpoint-up(large){
+      margin-top: 2em;
+    }
+    a{
+      
+      @include breakpoint-up(large){
+        margin-right: 0.5em;
+      }
+      @include breakpoint-up(xlarge){
+        margin-right: 0.5em;
+      }
+    }
+  }
+  &__welcome-tag {
+    background-color: $pm-lite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    width: fit-content;
+    padding: 0 1em;
+    margin-bottom: 1em;
+    border-radius: 26px;
+    @include breakpoint-up(large){
+      margin-bottom: 2em;
+    }
+    img {
+      object-fit: contain;
+    }
+  }
+  &__desc {
+    img {
+      display: none;
+      @include breakpoint-up(large){
+        object-fit: contain;
+        display: flex;
+      }
+    }
+    @include breakpoint-up(large){
+      display: flex;
+    }
+    p{
+      @include breakpoint-up(large){
+        max-width: 80%;
+      }
+    }
+  }
+  &__dish-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 100px;
+    background-color: $bg-lit;
+    width: fit-content;
+    min-width: 7em;
+    padding: 0.1em 1em 0 0;
+ 
+    .head {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      
+    }
+    .dish-name {
+      margin-bottom: 0;
+      font-weight: 600;
+      line-height: 0;
+      font-weight: bold;
+      @include breakpoint-up(large){
+        margin-bottom: 0.7em;
+      }
+    }
+    .stars {
+      svg {
+        fill: $primary;
+        width: 0.5em;
+        margin-top: 0;
+        @include breakpoint-up(large){
+          width: 0.6em;
+        }
+      }
+    }
+    .dish-price {
+      margin-bottom: 0;
+      font-size: 0.7rem;
+      font-weight:700;
+      @include breakpoint-up(large){
+        font-size: 1rem;
+        margin-bottom: 0.4em;
+        margin-top: 0;
+      }
+    }
+  }
+  .big-card {
+    position: absolute;
+    top: -15%;
+    left: -5%;
+    // z-index: -1;
+    
+    @include breakpoint-up(large){
+      top: 0;
+    }
+    @include breakpoint-up(xlarge){
+      top: 3%;
+      left: 5%;
+    }
+    .head {
+      img {
+        object-fit: contain;
+        max-width: 3em;
+        @include breakpoint-up(large){
+          max-width: 4em;
+        }
+        @include breakpoint-up(xlarge){
+          max-width:5.5em;
+        }
+      }
+    }
+    .dish-name {
+      font-weight: 600;
+      font-size: 0.7rem;
+      line-height: 1.5em;
+      font-weight: bold;
+      @include breakpoint-up(large){
+        font-size: 0.7rem;
+        line-height: 0;
+      }
+      @include breakpoint-up(xlarge){
+        font-size:0.95rem;
+        line-height: 0;
+      }
+    }
+    h3 {
+      line-height: 1em;
+      margin-top: 0.3em;
+      padding-bottom: 0.8em;
+      font-size: 0.8rem;
+      @include breakpoint-up(large){
+       margin-top: 0.2em;
+       padding-bottom: 0;
+      }
+      @include breakpoint-up(xlarge){
+      font-size: 1rem;
+      }
+    }
+  }
+  .small-card {
+    position: absolute;
+    top: 60%;
+    right: -5%;
+    min-width: 4em;
+    padding-right: 0.3em;
+    
+    @include breakpoint-up(large){
+      bottom: 25%;
+      top: unset;
+      right: 5%;
+      padding-right: 1.5em;
+    }
+
+    img {
+      width: 2em;
+      @include breakpoint-up(large){
+        width: 3.5em;
+      }
+      @include breakpoint-up(xlarge){
+        width: 4em;
+      }
+    }
+    svg {
+      width: 0.4em;
+      @include breakpoint-up(large){
+        width: 0.6em;
+      }
+    }
+     .dish-name {
+      font-weight: 600;
+      font-size: 0.45rem;
+      line-height: 1.5em;
+      font-weight: bold;
+      @include breakpoint-up(large){
+        font-size: 0.7rem;
+        line-height: 0;
+        
+      }
+      @include breakpoint-up(xlarge){
+        font-size: 0.9rem;
+      }
+    }
+
+    h3 {
+      line-height: 1em;
+      margin-top: 0.3em;
+      padding-bottom: 0.8em;
+      font-size: 0.5rem;
+      @include breakpoint-up(large){
+        margin-top: 0.3em;
+         padding-bottom: 0;
+         font-size: 0.8rem;
+       }
+    }
+  }
+  .contact-card {
+    position: absolute;
+    bottom: 5%;
+    left: -5%;
+    padding-right: 0.3em;
+    min-width:4em;
+    @include breakpoint-up(large){
+      bottom: 20%;
+      left: -10%;
+      padding: 0.5em;
+    }
+    @include breakpoint-up(xlarge){
+      bottom: 20%;
+      left: 5%;
+      padding: 0.5em;
+      
+    }
+    .head{
+      img {
+        width: 2.3em;
+        padding: 0.3em;
+        @include breakpoint-up(large){
+          width: 3em;
+        }
+        @include breakpoint-up(xlarge){
+          width: 4em;
+        }
+      }
+
+    }
+    svg {
+      width: 0.4em;
+  
+    }
+
+    h3 {
+      margin-top: 0;
+      padding-bottom: 0.2em;
+    }
+    .dish-name{
+        line-height: 0;
+        @include breakpoint-up(large){
+         font-size: 0.9rem;
+        }
+        @include breakpoint-up(xlarge){
+         font-size: 1rem;
+        }
+    }
+    .smallp{
+        font-size: 0.7rem;
+        margin: 0;
+        padding-top: 0.5em;
+        @include breakpoint-up(large){
+          font-size: 0.7rem;
+          padding-top: 0;
+        }
+    }
+    .extra{
+      background-color: $primary;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.2em;
+      border-radius: 50%;
+      @include breakpoint-up(large){
+        width: 2.3em;
+        height: 2.3em;
+        padding: 0.5em;
+        margin-left: 0.3em;
+      }
+      @include breakpoint-up(xlarge){
+        width: 3.3em;
+        height: 3.3em;
+        padding: 0.4em;
+        margin-left: 1em;
+      }
+     img{
+      width: 1em;
+      background-color: $primary;
+      @include breakpoint-up(large){
+        width: 1.5em;
+      }
+      @include breakpoint-up(xlarge){
+        width: 1.6em;
+      }
+     }
+    }
+  }
+}

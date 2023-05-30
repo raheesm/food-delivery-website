@@ -1,0 +1,98 @@
+.abt-contact {
+  background-size: cover;
+  background-repeat: no-repeat;
+  // background-attachment: fixed;
+  background-position: bottom center;
+  height: 28vh;
+  color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-blend-mode: soft-light;
+  background-color: rgba(0, 0, 0, 0.493);
+  h3 {
+    font-size: 1.3rem;
+    text-align: center;
+    @include breakpoint-up(large) {
+      font-size: 3rem;
+      font-weight: normal;
+    }
+    span {
+      text-transform: uppercase;
+      font-size: 1.6rem;
+    @include breakpoint-up(large) {
+      font-size: inherit;
+      font-weight: 600;
+      font-size: 3.5rem;
+    }
+    }
+  }
+
+  @include breakpoint-up(large) {
+    height: 80vh;
+    background-position: center center;
+  }
+  a {
+    color: #ffffff;
+  }
+
+  &__link {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    gap: 0.1em;
+
+    @include breakpoint-up(large) {
+      height: 3.5em;
+    }
+    &:hover {
+      .wup-i {
+        background-color: $primary;
+      }
+      svg {
+        fill: green;
+      }
+    }
+    svg {
+      width: 2em;
+      height: 1.5em;
+      @include breakpoint-up(large) {
+        width: 2em;
+        height: 2em;
+      }
+    }
+    .wup-i {
+      background-color: $secondary;
+      padding: 0.7em;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      @extend .flex-center-column;
+      @include breakpoint-up(large) {
+        padding: 0.7em 1.5em;
+        height: 100%;
+      }
+    }
+    p {
+      margin: 0;
+    }
+  }
+}

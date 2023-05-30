@@ -1,0 +1,273 @@
+.home-about {
+  @include breakpoint-up(large){
+   padding: 3em 0;     
+  }
+  @include breakpoint-up(xxlarge){
+   padding: 8em 0;  
+  }
+  &__card {
+    margin-top: 1em;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 0.5em;
+    @include breakpoint-up(large) {
+      grid-template-columns: repeat(2, 1fr);
+      width: 70%;
+    
+    }
+    @include breakpoint-up(xlarge) {
+     -webkit-column-gap: 2em;
+        -moz-column-gap: 2em;
+             column-gap: 2em;
+    }
+    .card {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      gap: 0.5em;
+      -webkit-box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.07);
+              box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.07);
+      border-radius: 100px;
+      padding: 0.3em;
+      margin-bottom: 0;
+      @include breakpoint-up(large) {
+      width: -webkit-fit-content;
+      width: -moz-fit-content;
+      width: fit-content;
+      min-width: 10em;
+      padding: 0.5em 0.8em;
+      margin-bottom:0.5em;
+
+      }
+      @include breakpoint-up(xlarge) {
+      gap: 1em;
+      min-width: 14em;
+      
+      }
+      @include breakpoint-up(xxlarge) {
+      
+      min-width: 16em;
+      padding: 0.5em 1em;
+      }
+      &__head {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        border: 1px solid #f2bd57;
+        background-color: #fff7ea;
+        padding: 0.2em;
+        border-radius: 50%;
+        @include breakpoint-up(xlarge) {
+          width: 3em;
+          height: 3em;
+          padding: 0.3em;
+        }
+        img {
+          width: 0.7em;
+          -o-object-fit: contain;
+             object-fit: contain;
+          @include breakpoint-up(large) {
+            width: 1.2em;
+            height: 1.2em;
+          }
+          @include breakpoint-up(xlarge) {
+            width: 1.5em;
+            height: 1.5em;
+          }
+          @include breakpoint-up(xxlarge) {
+           
+          }
+        }
+      }
+      &__body {
+
+        @include breakpoint-up(large){
+          padding: 0.2em;
+        }
+        h3 {
+          font-size: 0.7rem;
+          margin: 0;
+          @include breakpoint-up(large) {
+            font-size:0.9rem;
+            font-weight: 600;
+          }
+          @include breakpoint-up(xxlarge) {
+            font-size:1rem;
+            font-weight: 600;
+          }
+        }
+      }
+    }
+  }
+  h2 {
+    @include breakpoint-up(large) {
+      text-align: left;
+    }
+  }
+  &__div {
+    h2{
+      text-align: left;
+    }
+    @include breakpoint-up(medium) {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+    }
+  }
+  &__img-div {
+   
+    .img-back{
+      position: relative;
+      background-color: $bg-lit;
+      border-radius: 50%;
+      padding: 1em;
+      width: -webkit-fit-content;
+      width: -moz-fit-content;
+      width: fit-content;
+      @include breakpoint-up(large){
+        padding: 2em;
+      }
+      @include breakpoint-up(xxlarge){
+        padding: 3em;
+      }
+    }
+    // &::after{
+    //   position: absolute;
+    //   content: "";
+    //   width: 80%;
+    //   height: 80%;
+    //   border-radius: 50%;
+    //   border: 1px solid gainsboro;
+    //   top: -10%;
+    //   left: 20%;
+    //   z-index: -1;
+    // }
+
+    @include breakpoint-down(small){
+      margin-bottom: 4em;
+    }
+    .about-img{
+      @include breakpoint-up(xxlarge){
+       max-width: 100%;
+       width: 30em;
+      }
+    }
+    
+  }
+  &__btns {
+    @include breakpoint-up(large) {
+      margin: 3em 0;
+    }
+  }
+  .delivery-count{
+    background-color: #fff;
+    position: absolute;
+    bottom: -20%;
+    right: 0%;
+    left: 0;
+    padding: 1em;
+    text-align: center;
+    border-radius: 5px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+   width: 60%;
+   margin-left: auto;
+
+    @include breakpoint-up(large){
+      width: 12em;
+      padding: 1.5em;
+      bottom: -10%;
+      right: 5%;
+    }
+    @include breakpoint-up(xxlarge){
+      padding: 1.5em;
+      bottom: 5%;
+      right: 10%;
+    }
+    &__div{
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+    }
+    .cli-imgs{
+      margin-bottom: 1.5em;
+      width: -webkit-fit-content;
+      width: -moz-fit-content;
+      width: fit-content;
+      
+      @include breakpoint-up(large){
+        margin-bottom: 2em;
+      }
+      img{
+        -webkit-transition: $pm-transition;
+        -o-transition: $pm-transition;
+        transition: $pm-transition;
+        &:nth-child(1){
+          position: absolute;
+          left: 20%;
+          z-index: 1;
+        }
+        &:nth-child(2){
+          position: absolute;
+          left: 32%;
+          z-index: 2;
+        }
+        &:nth-child(3){
+          position: absolute;
+          left: 45%;
+          z-index: 3;
+        }
+        &:nth-child(4){
+          position: absolute;
+          left: 60%;
+          z-index: 4;
+        }
+        &:hover{
+          z-index: 9;
+          -webkit-transform: scale(1.1);
+              -ms-transform: scale(1.1);
+                  transform: scale(1.1);
+        }
+      }
+    }
+
+    h3{
+      justify-self: flex-end;
+      @include breakpoint-up(large){
+        font-size: 1.3rem;
+      }
+    }
+  }
+}

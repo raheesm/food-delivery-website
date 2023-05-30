@@ -1,0 +1,182 @@
+.hwt-order{
+    position: relative;
+    h2{
+        span{
+            @include breakpoint-up(large){
+                font-size: 5rem;
+            }
+        }
+      }
+    @include breakpoint-up(large){
+        min-height: 100vh;
+        background-image: url('../images/order-curve.svg');
+        background-size: 25em;
+        background-repeat: no-repeat;
+        background-position: top 95% left 40%;
+        margin-bottom: 5em;
+      
+    }
+    @include breakpoint-up(xlarge){
+        background-size: 26em;
+        min-height: 90vh;
+        background-position: top 56% left 42%;
+      
+    }
+    @include breakpoint-up(xxlarge){
+        background-size: 30em;
+        min-height: 90vh;
+        background-position: top 65% left 40%;
+      
+    }
+    &__div{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        gap: 1em;
+        @include breakpoint-up(large){
+            gap: 3em;
+        }
+        @include breakpoint-up(xxlarge){
+            gap: 5em;
+        }
+        .btn-outline{
+            @include breakpoint-up(large){
+                position: absolute;
+                bottom: -5%;
+                right: 20%;
+            }
+            @include breakpoint-up(xxlarge){
+                position: absolute;
+                bottom: 0%;
+                right: 20%;
+            }
+        }
+        .hwt-card{
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
+            gap: 0.5em;
+            border: 1px solid $primary;
+            width: -webkit-fit-content;
+            width: -moz-fit-content;
+            width: fit-content;
+            border-radius: 30px;
+            padding: 0.3em;
+            padding-right: 0.5em;
+            @include breakpoint-up(large){
+                border-radius: 35px;
+                   padding: 0.5em;
+                   padding-right: 2em;
+                //    transform: translateX(20%);
+            }
+            &__head{
+                border-radius: 50%;
+                background-color: $primary;
+                width: 1em;
+                height: 1em;
+                aspect-ratio: 1/1;
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-align: center;
+                    -ms-flex-align: center;
+                        align-items: center;
+                -webkit-box-pack: center;
+                    -ms-flex-pack: center;
+                        justify-content: center;
+                @include breakpoint-up(large){
+                width: 2.5em;
+                height: 2.5em;
+                
+             }
+                h4{
+                    font-size: 0.7rem;
+                    @include breakpoint-up(large){
+                        font-size: 1rem;
+                 }
+                   
+                }
+            }
+            &__body{
+                h3{
+                    margin: 0;
+                    font-weight: 500;
+                    font-size: 0.6rem;
+                    text-align: left;
+                    @include breakpoint-up(large){
+                        font-size: 1rem;
+                 }
+                }
+            }
+     
+        }
+    }
+    &__item{
+        &:nth-child(2){
+            @include breakpoint-up(large){
+               margin-left: 7em;
+            }
+        }
+        &:nth-child(3){
+            @include breakpoint-up(large){
+               margin-left: 10em;
+            }
+        }
+        &:nth-child(4){
+            @include breakpoint-up(large){
+               margin-left: 5em;
+            }
+        }
+        &:nth-child(5){
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                    flex-direction: column;
+            gap: 1em;
+            @include breakpoint-up(large){
+               margin-left: 15em;
+               max-width: 25em;
+               -webkit-box-orient: horizontal;
+               -webkit-box-direction: normal;
+                   -ms-flex-direction: row;
+                       flex-direction: row;
+               max-width: unset;
+            }
+        }
+   
+    }
+    &__img{
+        @include breakpoint-up(large){
+            position: absolute;
+            top: 10%;
+            right: 12%;
+            width: -webkit-fit-content;
+            width: -moz-fit-content;
+            width: fit-content;
+            img{
+                width: 23em;
+            }
+        }
+        @include breakpoint-up(xxlarge){
+            position: absolute;
+            top: 10%;
+            right: 16%;
+            width: -webkit-fit-content;
+            width: -moz-fit-content;
+            width: fit-content;
+            img{
+                width: 30em;
+            }
+        }
+    }
+}

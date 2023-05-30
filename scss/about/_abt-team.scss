@@ -1,0 +1,93 @@
+.abt-team{
+    margin-bottom: 2em;
+    padding: 2em 0;
+    .arrow-link{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: end;
+            -ms-flex-pack: end;
+                justify-content: flex-end;
+        margin-right: 2em;
+        gap: 1em;
+        color: $secondary;
+        font-weight: 600;
+        svg{
+            width: 3em;
+            .arrow{
+                -webkit-transition: $pm-transition;
+                -o-transition: $pm-transition;
+                transition: $pm-transition;
+            }
+        }
+        &:hover{
+          
+            svg{
+                // transform: translateX(10px);
+                .arrow{
+                    -webkit-transform: translateX(5px);
+                        -ms-transform: translateX(5px);
+                            transform: translateX(5px);
+                }
+            }
+        }
+    }
+}
+
+
+// .arrow-link{
+//     color: $secondary;
+//     display: flex;
+//     width: 100%;
+//     align-items: center;
+//     position: relative;
+//     justify-content: flex-end;
+//     margin-right: 0;
+
+//     &::after{
+        
+//         content: "";
+//         position: absolute;
+//         top: 22%;
+//         right: 15%;
+//         width: 3em;
+//         height: 3em;
+//         border: 2px solid $secondary;
+//         border-radius: 50%;
+//     }
+//     &:hover{
+//         &:after{
+//             margin-left: 4em;
+//         }
+//         .long-arrow-right{
+//             margin-left: 4em;
+//         }
+//     }
+// }
+// .long-arrow-right{
+//     display: block;
+//     margin: 30px auto;
+//     width: 20px;
+//     height: 20px;
+//     border-top: 2px solid $secondary;
+//     border-left: 2px solid $secondary;
+//   }
+//   .long-arrow-right{
+//    transform: rotate(135deg);
+//   }
+  
+//   .long-arrow-right::after{
+//     content: "";
+//     display: block;
+//     width: 2px;
+//     height: 45px;
+//     background-color: $secondary;
+//     transform: rotate(-45deg) translate(15px, 4px);
+//     left: 0;
+//     top: 0;
+//   }
+  
+  

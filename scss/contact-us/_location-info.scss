@@ -1,0 +1,134 @@
+.location-info {
+  position: relative;
+  margin-bottom: 2em;
+  @include breakpoint-up(large) {
+    min-height: 100vh;
+    background-image: url(../images/location-curve1.svg);
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    margin-bottom: 8em;
+
+    &:nth-child(even){
+      -webkit-transform: scaleX(-1);
+          -ms-transform: scaleX(-1);
+              transform: scaleX(-1);
+      h2,h3,h4,a,p{
+        -webkit-transform: scaleX(-1);
+            -ms-transform: scaleX(-1);
+                transform: scaleX(-1);
+      }
+      h3,h4{
+        text-align: right;
+      }
+      .location-card{
+        h4{
+          text-align: left;
+        }
+        &__footer
+        {
+          -webkit-transform: scaleX(-1);
+              -ms-transform: scaleX(-1);
+                  transform: scaleX(-1);
+        }
+      }
+    }
+  }
+  @include breakpoint-up(xlarge) {
+    background-position: bottom center;
+    background-size: contain;
+    min-height: 70vh;
+  }
+  @include breakpoint-up(xxlarge) {
+    min-height: 65vh;
+  }
+  .small-title {
+    margin-top: 1em;
+    @include breakpoint-up(large) {
+      font-size: 1.5rem;
+      margin-top: 1em;
+    }
+  }
+
+  .section-head {
+    @include breakpoint-up(large) {
+      margin-bottom: 5em;
+    }
+  }
+  &__details {
+    h3 {
+      font-size: 1.2rem;
+      font-weight: 900;
+      @include breakpoint-up(large) {
+        font-size: 2.2rem;
+        margin-bottom: 0.5em;
+      }
+    }
+    p {
+      @include breakpoint-up(large) {
+        max-width: 60%;
+      }
+    }
+  }
+  &__special {
+    margin-top: 1.5em;
+    position: relative;
+    z-index: 2;
+    .specials {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      @include breakpoint-up(large) {
+        min-height: 15em;
+      }
+      img {
+        -o-object-fit: contain;
+           object-fit: contain;
+        @include breakpoint-up(large) {
+          position: absolute;
+        }
+        &:nth-child(1) {
+          @include breakpoint-up(large) {
+            top: 10%;
+          }
+        }
+        &:nth-child(2) {
+          @include breakpoint-up(large) {
+            top: 30%;
+            left: 20%;
+          }
+        }
+        &:nth-child(3) {
+          @include breakpoint-up(large) {
+            top: 70%;
+            left: 50%;
+          }
+        }
+      }
+    }
+  }
+  .location-card {
+    z-index: 3;
+    @include breakpoint-up(large) {
+      position: absolute;
+      top: 0%;
+      right: 5%;
+    }
+    &__head {
+      @include breakpoint-up(large) {
+        height: 22em;
+        width: 18em;
+      }
+    }
+    &__body {
+      @include breakpoint-up(large) {
+        top: 80%;
+      }
+    }
+    .contact-details {
+      @include breakpoint-up(large) {
+        margin-bottom: 5em;
+      }
+    }
+  }
+}
+

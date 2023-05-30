@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Delivery</title>
+    <link rel="stylesheet" href="assets/css/swiper.min.css">
+    <link rel="stylesheet" href="assets/css/main.min.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container container--px">
+            <nav class="header__menu">
+                <a href="index.html" class="logo"><img src="assets/images/logo.png" alt="almas-logo" width="100"></a>
+                <a href="#" id="top-orderbtn">Order Now</a>
+                <a href="cart.html" class="cart-count">
+                    <div class="count">10</div>
+                    <div class="cart-hover">
+                        <div class="cart-hover__div">
+                            <div class="cart-hover__head">
+                                <!-- <button class="btn btn-outline">X</button> -->
+                                <div>
+                                    <h2>Your Delicious Selection</h2>
+
+                                </div>
+                            </div>
+                            <div class="cart-hover__body">
+                                <div class="cart__item">
+                                    <div class="cart__item__body">
+                                        <div class="img__div">
+                                            <img src="assets/images/dishes/mutton-biriyani.png" alt="cart-item">
+                                        </div>
+                                        <div class="content__div">
+                                            <div class="ordered-items">
+                                                <h3 class="dish__name">Pizza</h3>
+                                                <p class="extras">Extra Spice, Extra Rice, Extra Chicken</p>
+                                            </div>
+                                            <div class="quantity-price">
+                                                <p>1 x 180</p>
+                                            </div>
+                                            <div class="cart__item-action">
+                                                <div class="crud-actions">
+                                                    <div class="reduce-quantiy">
+                                                        <button>-</button>
+                                                    </div>
+                                                    <div class="add-item">
+                                                        <button>+</button>
+                                                    </div>
+                                                    <div class="delete-item">
+                                                        <button>
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                                                height="16" fill="currentColor" class="bi bi-trash"
+                                                                viewBox="0 0 16 16">
+                                                                <path
+                                                                    d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5Zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5Zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6Z" />
+                                                                <path
+                                                                    d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1ZM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118ZM2.5 3h11V2h-11v1Z" />
+                                                            </svg>
+                                                        </button>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cart__item">
+                                    <div class="cart__item__body">
+                                        <div class="img__div">
+                                            <img src="assets/images/dishes/mutton-biriyani.png" alt="cart-item">
+                                        </div>
+                                        <div class="content__div">
+                                            <div class="ordered-items">
+                                                <h3 class="dish__name">Chapathi</h3>
+                                                <p class="extras">Extra Spice, Extra Rice, Extra Chicken</p>
+                                            </div>
+                                            <div class="quantity-price">
+                                                <p>1 x 180</p>
+                                            </div>
+                                            <div class="cart__item-action">
+                                                <div class="crud-actions">
+                                                    <div class="reduce-quantiy">
+                                                        <button>-</button>
+                                                    </div>
+                                                    <div class="add-item">
+                                                        <button>+</button>
+                                                    </div>
+                                                    <div class="delete-item">
+                                                        <button>
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                                                height="16" fill="currentColor" class="bi bi-trash"
+                                                                viewBox="0 0 16 16">
+                                                                <path
+                                                                    d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5Zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5Zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6Z" />
+                                                                <path
+                                                                    d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1ZM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118ZM2.5 3h11V2h-11v1Z" />
+                                                            </svg>
+                                                        </button>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cart__item">
+                                    <div class="cart__item__body">
+                                        <div class="img__div">
+                                            <img src="assets/images/dishes/mutton-biriyani.png" alt="cart-item">
+                                        </div>
+                                        <div class="content__div">
+                                            <div class="ordered-items">
+                                                <h3 class="dish__name">Beef Biriyani</h3>
+                                                <p class="extras">Extra Spice, Extra Rice, Extra Chicken</p>
+                                            </div>
+                                            <div class="quantity-price">
+                                                <p>1 x 180</p>
+                                            </div>
+                                            <div class="cart__item-action">
+                                                <div class="crud-actions">
+                                                    <div class="reduce-quantiy">
+                                                        <button>-</button>
+                                                    </div>
+                                                    <div class="add-item">
+                                                        <button>+</button>
+                                                    </div>
+                                                    <div class="delete-item">
+                                                        <button>
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                                                height="16" fill="currentColor" class="bi bi-trash"
+                                                                viewBox="0 0 16 16">
+                                                                <path
+                                                                    d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5Zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5Zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6Z" />
+                                                                <path
+                                                                    d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1ZM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118ZM2.5 3h11V2h-11v1Z" />
+                                                            </svg>
+                                                        </button>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cart__item">
+                                    <div class="cart__item__body">
+                                        <div class="img__div">
+                                            <img src="assets/images/dishes/mutton-biriyani.png" alt="cart-item">
+                                        </div>
+                                        <div class="content__div">
+                                            <div class="ordered-items">
+                                                <h3 class="dish__name">Mutton Biriyani</h3>
+                                                <p class="extras">Extra Spice, Extra Rice, Extra Chicken</p>
+                                            </div>
+                                            <div class="quantity-price">
+                                                <p>1 x 180</p>
+                                            </div>
+                                            <div class="cart__item-action">
+                                                <div class="crud-actions">
+                                                    <div class="reduce-quantiy">
+                                                        <button>-</button>
+                                                    </div>
+                                                    <div class="add-item">
+                                                        <button>+</button>
+                                                    </div>
+                                                    <div class="delete-item">
+                                                        <button>
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                                                height="16" fill="currentColor" class="bi bi-trash"
+                                                                viewBox="0 0 16 16">
+                                                                <path
+                                                                    d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5Zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5Zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6Z" />
+                                                                <path
+                                                                    d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1ZM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118ZM2.5 3h11V2h-11v1Z" />
+                                                            </svg>
+                                                        </button>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cart__item">
+                                    <div class="cart__item__body">
+                                        <div class="img__div">
+                                            <img src="assets/images/dishes/mutton-biriyani.png" alt="cart-item">
+                                        </div>
+                                        <div class="content__div">
+                                            <div class="ordered-items">
+                                                <h3 class="dish__name">Chicken Biriyani</h3>
+                                                <p class="extras">Extra Spice, Extra Rice, Extra Chicken</p>
+                                            </div>
+                                            <div class="quantity-price">
+                                                <p>1 x 180</p>
+                                            </div>
+                                            <div class="cart__item-action">
+                                                <div class="crud-actions">
+                                                    <div class="reduce-quantiy">
+                                                        <button>-</button>
+                                                    </div>
+                                                    <div class="add-item">
+                                                        <button>+</button>
+                                                    </div>
+                                                    <div class="delete-item">
+                                                        <button>
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                                                height="16" fill="currentColor" class="bi bi-trash"
+                                                                viewBox="0 0 16 16">
+                                                                <path
+                                                                    d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5Zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5Zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6Z" />
+                                                                <path
+                                                                    d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1ZM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118ZM2.5 3h11V2h-11v1Z" />
+                                                            </svg>
+                                                        </button>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cart-hover__bottom">
+                                <div class="btn btn-lite br-0" type="submit" style="width:80%;margin:0 auto">Sub Total :
+                                    360</div><br>
+                                <div class="btn btn-primary br-0" style="width:80%;margin:0 auto">View All</div>
+
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="search.html" class="search" id="search-bar">
+                    <input class="search-txt" type="text" placeholder="Search..." disabled />
+                    <button class="submit"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15"
+                            fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                            <path
+                                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                        </svg></button>
+                </a>
+                <div id="menu-bar">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                        <path fill-rule="evenodd"
+                            d="M3 6.75A.75.75 0 013.75 6h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 6.75zM3 12a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 12zm0 5.25a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </div>
+                <ul class="menu-list">
+                    <button id="menuCloseBtn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                            fill="currentColor" class="w-6 h-6">
+                            <path fill-rule="evenodd"
+                                d="M5.47 5.47a.75.75 0 011.06 0L12 10.94l5.47-5.47a.75.75 0 111.06 1.06L13.06 12l5.47 5.47a.75.75 0 11-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 01-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 010-1.06z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </button>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="support.html">Support</a></li>
+                    <li><a href="order.html">Menu</a></li>
+                    <li><a href="offers.html">Offers</a></li>
+                    <li><a href="contact-us.html">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- page banner -->
+
+        <section class="page-banner" style="background-image: url('assets/images/bnrs/menu.jpg');">
+            <div class="container container--px">
+                <div class="page-banner__div">
+                    <h2>Offers For You</h2>
+                    <p>Explore Our Top Offers</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- page banner end-->
+
+        <!-- Home Dish filter section -->
+
+        <section class="dish-filter">
+            <div class="container container--px">
+                <h2>We Offer You Different Tastes</h2>
+                <div class="dish-filter__div">
+                    <div id="filter-buttons">
+                        <button class="btn btn-outline filter-btn" data-filter="all">All</button>
+                        <!-- <button class="btn btn-outline filter-btn" data-filter="arabian">Arabian</button>
+                        <button class="btn btn-outline filter-btn" data-filter="beverages">Beverages</button>
+                        <button class="btn btn-outline filter-btn" data-filter="category2">Burgers</button>
+                        <button class="btn btn-outline filter-btn active-cat" data-filter="non-veg">Non-Veg</button>
+                        <button class="btn btn-outline filter-btn" data-filter="veg">Veg</button>
+                        <button class="btn btn-outline filter-btn" data-filter="cafe">Cafe</button> -->
+                        <button class="btn btn-outline filter-icon"><img src="assets/images/icons/filter.png"
+                                alt=""></button>
+                    </div>
+
+                    <div id="item-container" class="item-container">
+                        <div class="item non-veg" data-category="non-veg">
+                            <div class="item__head">
+                                <img src="assets/images/dishes/mutton-biriyani.png" alt="motton-biriyani">
+                                <h3>Mutton Biriyani</h3>
+                            </div>
+                            <div class="item__body">
+                                <p class="item__mrp"><del>MRP: 210</del></p>
+                                <p class="item__stock">Available</p>
+                                <div class="stars-container" data-rating="1">
+                                    <div class="stars"></div>
+                                </div>
+                            </div>
+                            <div class="item__footer">
+                                <h3 class="price">$ 150.00</h3>
+                                <a href="#" class="btn btn-outline cart-btn">Add to Cart</a>
+                            </div>
+                        </div>
+                        <div class="item non-veg" data-category="non-veg">
+                            <div class="item__head">
+                                <img src="assets/images/dishes/mutton-biriyani.png" alt="motton-biriyani">
+                                <h3>Chicken Curry</h3>
+                            </div>
+                            <div class="item__body">
+                                <p class="item__mrp"><del>MRP: 210</del></p>
+                                <p class="item__stock">Available</p>
+                                <div class="stars-container" data-rating="2">
+                                    <div class="stars"></div>
+                                </div>
+                            </div>
+                            <div class="item__footer">
+                                <h3 class="price">$ 150.00</h3>
+                                <a href="#" class="btn btn-outline cart-btn">Add to Cart</a>
+                            </div>
+                        </div>
+                        <div class="item  non-veg" data-category="non-veg">
+                            <div class="item__head">
+                                <img src="assets/images/dishes/mutton-biriyani.png" alt="motton-biriyani">
+                                <h3>Farfalle Pasta</h3>
+                            </div>
+                            <div class="item__body">
+                                <p class="item__mrp"><del>MRP: 210</del></p>
+                                <p class="item__stock">Available</p>
+                                <div class="stars-container" data-rating="3">
+                                    <div class="stars"></div>
+                                </div>
+                            </div>
+                            <div class="item__footer">
+                                <h3 class="price">$ 150.00</h3>
+                                <a href="#" class="btn btn-outline cart-btn">Add to Cart</a>
+                            </div>
+                        </div>
+                        <div class="item veg" data-category="veg">
+                            <div class="item__head">
+                                <img src="assets/images/dishes/mutton-biriyani.png" alt="motton-biriyani">
+                                <h3>Spanish Paella</h3>
+                            </div>
+                            <div class="item__body">
+                                <p class="item__mrp"><del>MRP: 210</del></p>
+                                <p class="item__stock">Available</p>
+                                <div class="stars-container" data-rating="5">
+                                    <div class="stars"></div>
+                                </div>
+                            </div>
+                            <div class="item__footer">
+                                <h3 class="price">$ 150.00</h3>
+                                <a href="#" class="btn btn-outline cart-btn">Add to Cart</a>
+                            </div>
+                        </div>
+                        <div class="item desert" data-category="desert">
+                            <div class="item__head">
+                                <img src="assets/images/dishes/mutton-biriyani.png" alt="motton-biriyani">
+                                <h3>Mashed Potatoes</h3>
+                            </div>
+                            <div class="item__body">
+                                <p class="item__mrp"><del>MRP: 210</del></p>
+                                <p class="item__stock">Available</p>
+                                <div class="stars-container" data-rating="4">
+                                    <div class="stars"></div>
+                                </div>
+                            </div>
+                            <div class="item__footer">
+                                <h3 class="price">$ 150.00</h3>
+                                <a href="#" class="btn btn-outline cart-btn">Add to Cart</a>
+                            </div>
+                        </div>
+                        <div class="item non-veg" data-category="non-veg">
+                            <div class="item__head">
+                                <img src="assets/images/dishes/mutton-biriyani.png" alt="motton-biriyani">
+                                <h3>Seafood Paella</h3>
+                            </div>
+                            <div class="item__body">
+                                <p class="item__mrp"><del>MRP: 210</del></p>
+                                <p class="item__stock">Available</p>
+                                <div class="stars-container" data-rating="5">
+                                    <div class="stars"></div>
+                                </div>
+                            </div>
+                            <div class="item__footer">
+                                <h3 class="price">$ 150.00</h3>
+                                <a href="#" class="btn btn-outline cart-btn">Add to Cart</a>
+                            </div>
+                        </div>
+                        <div class="item burgers" data-category="burgers">
+                            <div class="item__head">
+                                <img src="assets/images/dishes/mutton-biriyani.png" alt="motton-biriyani">
+                                <h3>Sushi</h3>
+                            </div>
+                            <div class="item__body">
+                                <p class="item__mrp"><del>MRP: 210</del></p>
+                                <p class="item__stock">Available</p>
+                                <div class="stars-container" data-rating="3">
+                                    <div class="stars"></div>
+                                </div>
+                            </div>
+                            <div class="item__footer">
+                                <h3 class="price">$ 150.00</h3>
+                                <a href="#" class="btn btn-outline cart-btn">Add to Cart</a>
+                            </div>
+                        </div>
+                        <div class="item desert" data-category="desert">
+                            <div class="item__head">
+                                <img src="assets/images/dishes/mutton-biriyani.png" alt="motton-biriyani">
+                                <h3>Prawn Paella</h3>
+                            </div>
+                            <div class="item__body">
+                                <p class="item__mrp"><del>MRP: 210</del></p>
+                                <p class="item__stock">Available</p>
+                                <div class="stars-container" data-rating="4">
+                                    <div class="stars"></div>
+                                </div>
+                            </div>
+                            <div class="item__footer">
+                                <h3 class="price">$ 150.00</h3>
+                                <a href="#" class="btn btn-outline cart-btn">Add to Cart</a>
+                            </div>
+                        </div>
+                        <div class="item sweet" data-category="sweet">
+                            <div class="item__head">
+                                <img src="assets/images/dishes/mutton-biriyani.png" alt="motton-biriyani">
+                                <h3>Prawn Paella</h3>
+                            </div>
+                            <div class="item__body">
+                                <p class="item__mrp"><del>MRP: 210</del></p>
+                                <p class="item__stock">Available</p>
+                                <div class="stars-container" data-rating="2">
+                                    <div class="stars"></div>
+                                </div>
+                            </div>
+                            <div class="item__footer">
+                                <h3 class="price">$ 150.00</h3>
+                                <a href="#" class="btn btn-outline cart-btn">Add to Cart</a>
+                            </div>
+                        </div>
+                        <div class="item sweet" data-category="sweet">
+                            <div class="item__head">
+                                <img src="assets/images/dishes/mutton-biriyani.png" alt="motton-biriyani">
+                                <h3>sweet potetto</h3>
+                            </div>
+                            <div class="item__body">
+                                <p class="item__mrp"><del>MRP: 210</del></p>
+                                <p class="item__stock">Available</p>
+                                <div class="stars-container" data-rating="3">
+                                    <div class="stars"></div>
+                                </div>
+                            </div>
+                            <div class="item__footer">
+                                <h3 class="price">$ 150.00</h3>
+                                <a href="#" class="btn btn-outline cart-btn">Add to Cart</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!-- filter popup -->
+
+            <div class="filter-popup">
+                <div class="container container-pall">
+                    <div class="filter-popup__header">
+                        <button class="btn btn-outline" id="close"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                                <path
+                                    d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
+                            </svg></button>
+                        <h2>Filter</h2>
+                    </div>
+                    <hr>
+                    <h3>Cuisines</h3>
+                    <div class="filter-popup__div">
+                        <div class="input-group">
+                            <input type="checkbox" name="category" value="desert" id="deserts">
+                            <p>Deserts</p>
+                        </div>
+                        <div class="input-group">
+                            <input type="checkbox" name="category" value="non-veg" id="non-veg">
+                            <p>Non Veg</p>
+                        </div>
+                        <div class="input-group">
+                            <input type="checkbox" name="category" value="veg" id="non-veg">
+                            <p>Veg</p>
+                        </div>
+                        <div class="input-group">
+                            <input type="checkbox" name="category" value="sweet" id="sweets">
+                            <p>Sweets</p>
+                        </div>
+                        <div class="input-group">
+                            <input type="checkbox" name="category" value="burgers" id="burgers">
+                            <p>Burgers</p>
+                        </div>
+                        <div class="input-group">
+                            <input type="checkbox" name="category" value="grill" id="drinks">
+                            <p>Grill</p>
+                        </div>
+                        <div class="input-group">
+                            <input type="checkbox" name="category" value="italian" id="veg">
+                            <p>Italian</p>
+                        </div>
+                    </div>
+                    <div class="btns">
+                        <button class="btn btn-outline" id="clear">CLEAR</button>
+                        <button class="btn btn-primary" id="result">SHOW RESULTS</button>
+                    </div>
+                </div>
+            </div>
+            <!-- filter popup end -->
+
+            <!-- product modal -->
+
+            <div class="pro-modal">
+                <div class="modal-card">
+                    <div class="modal-card__header">
+                        <h3>Product Name</h3>
+                        <hr>
+                    </div>
+                    <div class="modal-card__body">
+                        <div class="img-div">
+                            <div class="dish">
+                                <img src="assets/images/dishes/sp2.png" alt="">
+                            </div>
+                        </div>
+                        <div class="content-div">
+                            <div class="dish-detail">
+                                <h3 class="price">$ 180.00</h3>
+                                <p class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis molestias
+                                    qui iusto.</p>
+                            </div>
+                            <div class="extras">
+                                <div class="input-group">
+                                    <input type="checkbox" name="extra" id="">
+                                    <p>Extra Spice +50</p>
+                                </div>
+                                <div class="input-group">
+                                    <input type="checkbox" name="extra" id="">
+                                    <p>Extra Spice +50</p>
+                                </div>
+                                <div class="input-group">
+                                    <input type="checkbox" name="extra" id="">
+                                    <p>Extra Spice +50</p>
+                                </div>
+                            </div>
+                            <div class="quantity-selection">
+                                <h4>Quantity</h4>
+                                <input type="number" name="quantity" value="1">
+                            </div>
+                            <div class="btns">
+                                <button class="btn btn-primary br-0" id="addtocart">Add to Cart</button>
+                                <button class="btn btn-outline br-0" id="cancel">Cancel</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- product modal end -->
+
+
+        </section>
+        <!-- Home Dish filter section end -->
+
+    </main>
+
+
+    <!-- footer -->
+
+    <footer>
+        <div class="container container--pall">
+            <div class="footer">
+                <a href="#" class="footer__logo"><img src="assets/images/logo.png" alt="logo"></a>
+
+                <div class="footer__grid">
+                    <div class="footer__card">
+                        <h3>Menu</h3>
+                        <ul>
+                            <li><a href="#">Veg</a></li>
+                            <li><a href="#">Non-Veg</a></li>
+                            <li><a href="#">Burger</a></li>
+                            <li><a href="#">Deserts</a></li>
+                            <li><a href="#">Cafe</a></li>
+                            <li><a href="#">Beverages</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__card">
+                        <h3>Restaurant</h3>
+                        <ul>
+                            <li><a href="#">Veg</a></li>
+                            <li><a href="#">Non-Veg</a></li>
+                            <li><a href="#">Burger</a></li>
+                            <li><a href="#">Deserts</a></li>
+                            <li><a href="#">Cafe</a></li>
+                            <li><a href="#">Beverages</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__card">
+                        <h3>Branches</h3>
+                        <ul>
+                            <li><a href="#">Veg</a></li>
+                            <li><a href="#">Non-Veg</a></li>
+                            <li><a href="#">Burger</a></li>
+                            <li><a href="#">Deserts</a></li>
+                            <li><a href="#">Cafe</a></li>
+                            <li><a href="#">Beverages</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__card">
+                        <h3>Support</h3>
+                        <ul>
+                            <li><a href="#">Veg</a></li>
+                            <li><a href="#">Non-Veg</a></li>
+                            <li><a href="#">Burger</a></li>
+                            <li><a href="#">Deserts</a></li>
+                            <li><a href="#">Cafe</a></li>
+                            <li><a href="#">Beverages</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__card">
+                        <h3>Follow Us</h3>
+                        <ul class="footer__social">
+                            <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                        viewBox="0 0 24 24">
+                                        <path
+                                            d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-2 8c0 .557-.447 1.008-1 1.008s-1-.45-1-1.008c0-.557.447-1.008 1-1.008s1 .452 1 1.008zm0 2h-2v6h2v-6zm3 0h-2v6h2v-2.861c0-1.722 2.002-1.881 2.002 0v2.861h1.998v-3.359c0-3.284-3.128-3.164-4-1.548v-1.093z" />
+                                    </svg></a></li>
+                            <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                        viewBox="0 0 24 24">
+                                        <path
+                                            d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-2 10h-2v2h2v6h3v-6h1.82l.18-2h-2v-.833c0-.478.096-.667.558-.667h1.442v-2.5h-2.404c-1.798 0-2.596.792-2.596 2.308v1.692z" />
+                                    </svg></a></li>
+                            <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                        viewBox="0 0 24 24">
+                                        <path
+                                            d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm0 7.082c1.602 0 1.792.006 2.425.035 1.627.074 2.385.845 2.46 2.459.028.633.034.822.034 2.424s-.006 1.792-.034 2.424c-.075 1.613-.832 2.386-2.46 2.46-.633.028-.822.035-2.425.035-1.602 0-1.792-.006-2.424-.035-1.63-.075-2.385-.849-2.46-2.46-.028-.632-.035-.822-.035-2.424s.007-1.792.035-2.424c.074-1.615.832-2.386 2.46-2.46.632-.029.822-.034 2.424-.034zm0-1.082c-1.63 0-1.833.007-2.474.037-2.18.1-3.39 1.309-3.49 3.489-.029.641-.036.845-.036 2.474 0 1.63.007 1.834.036 2.474.1 2.179 1.31 3.39 3.49 3.49.641.029.844.036 2.474.036 1.63 0 1.834-.007 2.475-.036 2.176-.1 3.391-1.309 3.489-3.49.029-.64.036-.844.036-2.474 0-1.629-.007-1.833-.036-2.474-.098-2.177-1.309-3.39-3.489-3.489-.641-.03-.845-.037-2.475-.037zm0 2.919c-1.701 0-3.081 1.379-3.081 3.081s1.38 3.081 3.081 3.081 3.081-1.379 3.081-3.081c0-1.701-1.38-3.081-3.081-3.081zm0 5.081c-1.105 0-2-.895-2-2 0-1.104.895-2 2-2 1.104 0 2.001.895 2.001 2s-.897 2-2.001 2zm3.202-5.922c-.397 0-.72.322-.72.72 0 .397.322.72.72.72.398 0 .721-.322.721-.72 0-.398-.322-.72-.721-.72z" />
+                                    </svg></a></li>
+                            <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                        viewBox="0 0 24 24">
+                                        <path
+                                            d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.5 8.778c-.441.196-.916.328-1.414.388.509-.305.898-.787 1.083-1.362-.476.282-1.003.487-1.564.597-.448-.479-1.089-.778-1.796-.778-1.59 0-2.758 1.483-2.399 3.023-2.045-.103-3.86-1.083-5.074-2.572-.645 1.106-.334 2.554.762 3.287-.403-.013-.782-.124-1.114-.308-.027 1.14.791 2.207 1.975 2.445-.346.094-.726.116-1.112.042.313.978 1.224 1.689 2.3 1.709-1.037.812-2.34 1.175-3.647 1.021 1.09.699 2.383 1.106 3.773 1.106 4.572 0 7.154-3.861 6.998-7.324.482-.346.899-.78 1.229-1.274z" />
+                                    </svg></a></li>
+
+                        </ul>
+                    </div>
+                </div>
+                <hr>
+                <div class="footer__copyright">
+                    <p>&copy; 2023 Restaurant</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- footer end -->
+
+    <script src="assets/js/header.js"></script>
+    <script src="assets/js/star.js"></script>
+    <script src="assets/js/dish-filter.js"></script>
+    <script src="assets/js/swiper.min.js"></script>
+    <script>
+        var searchBox = document.getElementById("search-bar");
+        // let topOrderBtn = document.getElementById("top-orderbtn");
+        var Icon = document.getElementsByClassName("submit")[0];
+        Icon.onclick = function () {
+            searchBox.classList.toggle("active");
+            // topOrderBtn.classList.toggle("hide");
+        }
+
+    </script>
+    <script>
+        var swiper = new Swiper(".testimonialSwiper", {
+            loop: true,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+    </script>
+</body>
+
+</html>

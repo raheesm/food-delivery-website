@@ -1,0 +1,180 @@
+$unchecked-star: "\2606";
+$unchecked-color: #888;
+$checked-star: "\2605";
+$checked-color: #e52;
+
+.star-cb-group {
+  /* remove inline-block whitespace */
+  font-size: 0;
+  * {
+    font-size: 1rem;
+  }
+  /* flip the order so we can use the + and ~ combinators */
+  unicode-bidi: bidi-override;
+  direction: rtl;
+  & > input {
+    display: none;
+    & + label {
+      /* only enough room for the star */
+      display: inline-block;
+      overflow: hidden;
+      text-indent: 9999px;
+      width: 1em;
+      white-space: nowrap;
+      cursor: pointer;
+      &:before {
+        display: inline-block;
+        text-indent: -9999px;
+        content: $unchecked-star;
+        color: $unchecked-color;
+      }
+    }
+    &:checked ~ label:before,
+    & + label:hover ~ label:before,
+    & + label:hover:before {
+      content: $checked-star;
+      color: #e52;
+      text-shadow: 0 0 1px #333;
+    }
+  }
+
+  /* the hidden clearer */
+  & > .star-cb-clear + label {
+    text-indent: -9999px;
+    width: 0.5em;
+    margin-left: -0.5em;
+  }
+  & > .star-cb-clear + label:before {
+    width: 0.5em;
+  }
+
+  &:hover > input + label:before {
+    content: $unchecked-star;
+    color: $unchecked-color;
+    text-shadow: none;
+  }
+  &:hover > input + label:hover ~ label:before,
+  &:hover > input + label:hover:before {
+    content: $checked-star;
+    color: $checked-color;
+    text-shadow: 0 0 1px #333;
+  }
+}
+
+
+fieldset {
+  border: 0;
+//   background: #222;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 1px;
+  padding: 1em 1.5em 0.9em;
+  margin: 1em auto;
+}
+#log {
+  margin: 1em auto;
+  width: 5em;
+  text-align: center;
+  background: transparent;
+}
+.stars {
+    display: inline-block;
+  
+    font-size: 0;
+  }
+  
+  .star {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    // margin: 0 2px;
+    background-color: transparent;
+    border: none;
+  }
+  
+  .star:before {
+    content: "\2606";
+    font-size: 18px;
+    color: #ccc;
+  }
+  
+  .star.filled:before {
+    content: "\2605";
+    color: #f2bd57;
+  }
+  input[type=submit]{
+      margin: 0 auto;
+      background-color: $primary;
+      color: #000;
+      font-weight: bold;
+      outline: 0;
+      border: 0;
+      padding: 1em 2em;
+      text-transform: uppercase;
+      width: 80%;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      text-align: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+    }
+
+form{
+    .star-cb-group{
+        *{
+            font-size: 2rem;
+        }
+    }
+    .stars {
+        display: inline-block;
+      
+        font-size: 0;
+      }
+      
+      .star {
+        display: inline-block;
+        width: 25px;
+        height: 25px;
+        // margin: 0 2px;
+        background-color: transparent;
+        border: none;
+      }
+      
+      .star:before {
+        content: "\2606";
+        font-size: 18px;
+        color: #ccc;
+      }
+      
+      .star.filled:before {
+        content: "\2605";
+        color: #f2bd57;
+      }
+      input[type=submit]{
+          margin: 0 auto;
+          background-color: $primary;
+          color: #000;
+          font-weight: bold;
+          outline: 0;
+          border: 0;
+          padding: 1em 2em;
+          text-transform: uppercase;
+          width: 80%;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          text-align: center;
+          -webkit-box-align: center;
+              -ms-flex-align: center;
+                  align-items: center;
+          -webkit-box-pack: center;
+              -ms-flex-pack: center;
+                  justify-content: center;
+        }
+}

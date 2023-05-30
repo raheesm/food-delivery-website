@@ -1,0 +1,620 @@
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  @include breakpoint-up(large) {
+    padding: 1em 0;
+  }
+  .container--px {
+    @include breakpoint-down(small) {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+  &__top-menu {
+    @include breakpoint-down(small) {
+      background-color: $primary;
+    }
+    @include breakpoint-up(large) {
+      padding-top: 1em;
+    }
+    svg {
+      width: -webkit-fit-content;
+      width: -moz-fit-content;
+      width: fit-content;
+      fill: white;
+      display: block;
+      @include breakpoint-up(large) {
+      }
+    }
+    ul {
+      list-style: none;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+      margin: 0;
+      padding: 0;
+      @include breakpoint-up(large) {
+        gap: 2em;
+        -webkit-box-pack: end;
+            -ms-flex-pack: end;
+                justify-content: flex-end;
+      }
+      li {
+        opacity: 0.7;
+        padding-bottom: 0;
+        -webkit-transition: $pm-transition;
+        -o-transition: $pm-transition;
+        transition: $pm-transition;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        gap: 0.2em;
+        padding: 0.2em 0.1em;
+        @include breakpoint-up(large) {
+          gap: 0.5em;
+        }
+        a {
+          color: #000;
+          font-weight: 500;
+          font-size: 0.7rem;
+          @include breakpoint-up(large) {
+            font-size: 1rem;
+          }
+        }
+        svg {
+          @include breakpoint-down(small) {
+            display: none;
+          }
+        }
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+  }
+  &__menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    // justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0.5em;
+    @include breakpoint-up(large) {
+      padding: 0;
+    }
+    .logo {
+      margin-bottom: 0;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      @include breakpoint-up(large) {
+      }
+      img {
+        width: 4em;
+        -o-object-fit: contain;
+           object-fit: contain;
+        @include breakpoint-up(large) {
+          width: 6em;
+          padding-right: 1em;
+        }
+        @include breakpoint-up(xlarge) {
+          width: 6em;
+        }
+      }
+    }
+
+    #menu-bar {
+      display: none;
+      -webkit-box-ordinal-group: 3;
+          -ms-flex-order: 2;
+              order: 2;
+      @include breakpoint-down(medium) {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        width: 1.5em;
+        svg {
+          fill: #000;
+        }
+      }
+    }
+    .menu-list {
+      list-style: none;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+
+      a {
+        text-decoration: none;
+        color: #000;
+        font-weight: 600;
+        position: relative;
+        font-family: $sec-font;
+
+        &::after {
+          background-color: $secondary;
+          content: "";
+          width: 0%;
+          height: 2px;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          -webkit-transition: 2s all linear;
+          -o-transition: 2s all linear;
+          transition: 2s all linear;
+        }
+        &:hover {
+          opacity: 1;
+          &::after {
+            width: 100%;
+          }
+        }
+      }
+      .active {
+        opacity: 1;
+        // color: yellow;
+        position: relative;
+        -webkit-transition: width 5s linear;
+        -o-transition: width 5s linear;
+        transition: width 5s linear;
+
+        &::after {
+          background-color: $secondary;
+          content: "";
+          width: 100%;
+          height: 2px;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          -webkit-transition: 2s all linear;
+          -o-transition: 2s all linear;
+          transition: 2s all linear;
+        }
+        &:hover {
+          &::after {
+            width: 100%;
+          }
+        }
+        &:active {
+          &::after {
+            width: 100%;
+          }
+        }
+      }
+
+      .head-btn {
+        background-color: $secondary;
+        padding: 0.8em 1.5em;
+        font-weight: normal;
+        border-radius: 5px;
+        -webkit-transition: $pm-transition;
+        -o-transition: $pm-transition;
+        transition: $pm-transition;
+        opacity: 1;
+        &:hover {
+          background-color: $secondary;
+          -webkit-box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
+            rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
+            rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset,
+            rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px,
+            rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px,
+            rgba(0, 0, 0, 0.09) 0px 32px 16px;
+                  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
+            rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
+            rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset,
+            rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px,
+            rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px,
+            rgba(0, 0, 0, 0.09) 0px 32px 16px;
+        }
+      }
+
+      @include breakpoint-up(small) {
+        display: none;
+      }
+      @include breakpoint-down(medium) {
+        display: none;
+      }
+      @include breakpoint-up(large) {
+        padding-top: 1em;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        gap: 2.5em;
+        margin-left: auto;
+        margin-right: 2em;
+      }
+
+      @include breakpoint-up(xxlarge) {
+        padding-top: 0.5em;
+      }
+      #menuCloseBtn {
+        position: absolute;
+        width: -webkit-fit-content;
+        width: -moz-fit-content;
+        width: fit-content;
+        height: 2em;
+        aspect-ratio: 1/1;
+        right: 5%;
+        top: 3%;
+        border-radius: 50%;
+        padding: 0.2em;
+        background-color: $primary;
+        @include breakpoint-up(large) {
+          display: none;
+        }
+      }
+    }
+  }
+  #top-orderbtn {
+    padding: 1em 1.5em;
+    border: none;
+    font-size: 0.6rem;
+    font-weight: bold;
+    -webkit-transition: 300ms all linear;
+    -o-transition: 300ms all linear;
+    transition: 300ms all linear;
+    font-family: $sec-font;
+    border-radius: 26px;
+    background-color: $primary;
+    color: #000;
+    @include breakpoint-up(large) {
+      font-size: 0.8rem;
+      padding: 0.9em 1.2em;
+      min-width: 10em;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+    }
+    @include breakpoint-up(xlarge) {
+      font-size: 1rem;
+    }
+    svg {
+      width: 2em;
+      -webkit-transition: 200ms all linear;
+      -o-transition: 200ms all linear;
+      transition: 200ms all linear;
+    }
+
+    &:hover {
+      svg {
+        -webkit-transform: translateX(2px);
+            -ms-transform: translateX(2px);
+                transform: translateX(2px);
+      }
+    }
+  }
+}
+
+// top menu
+
+// search old start
+.search {
+  background: $primary;
+  padding: 2px;
+  border-radius: 65px;
+  border: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 2%;
+  border: 1px solid $primary;
+  background: white;
+  right: -30px;
+  margin-left: auto;
+  @include breakpoint-up(large) {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    margin-right: 1%;
+    margin-left: unset;
+  }
+}
+.submit {
+  font-size: 5px;
+  cursor: pointer;
+  color: white;
+  background: none;
+  border: none;
+  padding: 0.5em;
+  background-color: $primary;
+  border-radius: 50%;
+  color: black;
+  float: right;
+  width: 28px;
+  height: 28px;
+  @include breakpoint-up(large) {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 0.8em;
+    font-size: 10px;
+    width: 25px;
+    height: 25px;
+  }
+  @include breakpoint-up(xlarge) {
+    font-size: 10px;
+    width: 30px;
+    height: 30px;
+  }
+
+  svg {
+    fill: #000;
+  }
+}
+.search-txt {
+  width: 100px;
+  padding: 0 20px;
+  font-size: 0.8rem;
+  border: none;
+  background: transparent;
+  outline: none;
+  -webkit-transition: 1s;
+  -o-transition: 1s;
+  transition: 1s;
+  cursor: pointer;
+  @include breakpoint-up(large) {
+    font-size: 0.9rem;
+  }
+  @include breakpoint-up(xxlarge) {
+    font-size: 0.9rem;
+    width: 150px;
+  }
+  &::-webkit-input-placeholder {
+    color: rgba(0, 0, 0, 0.252);
+  }
+  &::-moz-placeholder {
+    color: rgba(0, 0, 0, 0.252);
+  }
+  &:-ms-input-placeholder {
+    color: rgba(0, 0, 0, 0.252);
+  }
+  &::-ms-input-placeholder {
+    color: rgba(0, 0, 0, 0.252);
+  }
+  &::placeholder {
+    color: rgba(0, 0, 0, 0.252);
+  }
+}
+
+.cart-count {
+  background-image: url("../images/shopping-bag.png");
+  background-size: cover;
+  background-position: center center;
+  font-size: 0.7rem;
+  width: 5em;
+  height: 5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 0.7em;
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+  @include breakpoint-up(large) {
+    -webkit-box-ordinal-group: 5;
+        -ms-flex-order: 4;
+            order: 4;
+    margin-left: unset;
+    width: 5em;
+    height: 5em;
+  }
+  @include breakpoint-up(xlarge) {
+    width: 7em;
+    height: 7em;
+  }
+  @include breakpoint-up(xxlarge) {
+    background-size: 7em;
+  }
+  &:hover {
+    .cart-hover {
+      @include breakpoint-down(small){
+        display: none;
+      }
+      display: block;
+
+    }
+  }
+
+  .count {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    background-color: $primary;
+    padding: 0.2em;
+    border-radius: 50%;
+    font-weight: bold;
+    width: 1.5em;
+    height: 1.5em;
+    @include breakpoint-up(large) {
+      width: 2em;
+      height: 2em;
+      text-align: center;
+
+      // font-size: 1rem;
+      color: #000;
+    }
+    @include breakpoint-up(xlarge) {
+      width: 2.5em;
+      height: 2.5em;
+      margin-top: 0.3em;
+    }
+  }
+  .cart-hover {
+    display: none;
+    background-color: transparent;
+    position: absolute;
+    z-index: 1;
+    top: 0%;
+    right: 0;
+    min-width: 30em;
+    height: 55em;
+    overflow-y: scroll;
+    &::-webkit-scrollbar {
+      display: none; /* hide the scrollbar */
+    }
+    hr {
+      background-color: gray !important;
+      color: gainsboro !important;
+    }
+    &__div {
+      background-color: #ffffff;
+      margin-top: 8em;
+      padding: 1em;
+      padding-bottom: 2em;
+    }
+    &__head {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      gap: 1em;
+      color: #000;
+      border-bottom: 1px solid gainsboro;
+      padding: 1em;
+      h2 {
+        font-size: 1.2rem;
+        font-weight: bold;
+        margin-bottom: 0;
+        width: 100%;
+      }
+      .btn {
+        padding: 5px;
+        width: 25px;
+        height: 25px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+      }
+    }
+    &__body {
+      color: #000;
+      .cart__item {
+        padding: 0.5em;
+        border-bottom: 1px solid gainsboro;
+        padding-bottom: 1em;
+        &:last-child {
+          border: none;
+        }
+        &__body {
+          gap: 2em;
+          padding-inline: 1em;
+          img {
+            width: 8em;
+          }
+          .dish__name {
+            font-size: 1rem;
+          }
+          .extras {
+            font-size: 0.8rem;
+            // max-width: 25ch;
+            opacity: 0.6;
+            margin: 0;
+            line-height: 1.2em;
+            padding: 0.5em 0;
+            font-weight: 500;
+          }
+          .quantity-price {
+            p {
+              font-size: 0.8rem;
+              margin-bottom: 0.5em;
+            }
+          }
+        }
+        &-action {
+          gap: 0.2em;
+          .crud-actions {
+            gap: 0.5em;
+            & > div {
+              width: 30px;
+              height: 30px;
+              border-width: 0.75px;
+              &:last-child {
+                margin-left: 2em;
+                background-color: #ffffff;
+              }
+            }
+            button {
+              width: 20px;
+              height: 20px;
+              background-color: none !important;
+              &:last-child {
+                padding: 0;
+              }
+            }
+            .delete-item {
+              button {
+                background-color: #ffffff;
+              }
+            }
+          }
+          p {
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+}
+#top-orderbtn {
+  -webkit-box-ordinal-group: 4;
+      -ms-flex-order: 3;
+          order: 3;
+  @include breakpoint-down(medium) {
+    display: none;
+  }
+}
+.hide {
+  @include breakpoint-down(medium) {
+    display: none;
+    opacity: 0;
+  }
+}

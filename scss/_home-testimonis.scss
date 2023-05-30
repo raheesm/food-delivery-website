@@ -1,0 +1,177 @@
+.home-testi{
+    padding-top: 1em;
+    @include breakpoint-up(large){
+     margin: 2em 0;      
+     padding-top: 4em; 
+    }
+    @include breakpoint-up(xxlarge){
+       margin-top: 6em;
+    }
+    &__div{
+        padding: 1em;
+
+        @include breakpoint-up(large){
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
+            padding: 3em;
+        }
+        @include breakpoint-up(xxlarge){
+            padding: 5em;
+        }
+        .card{
+            background-color: transparent!important;
+            -webkit-box-shadow: none;
+                    box-shadow: none;
+        }
+    }
+    .navs{
+        width: 50%;
+       .swiper-button-next,.swiper-button-prev{
+        background-color: $primary;
+        border-radius: 50%;
+        width: 1em;
+        height: 1em;
+        padding: 0.5em;
+        top: 70%;
+        -webkit-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+                transform: translateY(-50%);
+        @include breakpoint-up(large){
+            width: 2em;
+            height: 2em;
+            top: unset;
+            bottom: 0%;
+        }
+        &::after{
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
+            -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                    justify-content: center;
+            font-size: 0.8rem;
+            color: #fff;
+            
+        }
+       }
+       .swiper-button-next{
+        right:35%;
+        @include breakpoint-up(large){
+           right: 35%;
+        }
+        @include breakpoint-up(xlarge){
+           right: 45%;
+        }
+        @include breakpoint-up(xxlarge){
+           right: 45%;
+        }
+        &::after{
+            left: 50%!important;
+        }
+       }
+       .swiper-button-prev{
+        left: 40%;
+        @include breakpoint-up(large){
+            left: 45%;
+        }
+        @include breakpoint-up(large){
+            left: 42%;
+        }
+       }
+    }
+    &__img{
+        @include breakpoint-up(large){
+            -webkit-box-ordinal-group: 3;
+                -ms-flex-order: 2;
+                    order: 2;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                    justify-content: center;
+        }
+        .img-back{
+            margin-top: 1em;
+            position: relative;
+            padding:0.5em;
+            z-index: 1;
+            @include breakpoint-up(large){
+                margin-top: 5em;
+            }
+            &::after{
+                position: absolute;
+                content: "";
+                background-color: $primary;
+                width: 100%;
+                height: 100%;
+                top: -8%;
+                left: -2%;
+                border-radius: 50%;
+                z-index: -1;
+            } 
+        }
+        img{
+            width: 100%;
+            -o-object-fit: contain;
+               object-fit: contain;
+         
+            @include breakpoint-up(large){
+                width: 23em;
+            }
+       
+        }
+    }
+    &__content{
+      
+        h2{
+            @include breakpoint-up(large){
+                font-size: 2.5rem;
+                text-align: left;
+                max-width: 15ch;
+            }
+            @include breakpoint-up(xlarge){
+                font-size: 3rem;
+            
+            }
+            @include breakpoint-up(xxlarge){
+                font-size: 3rem;
+                
+            }
+        }
+        h3{
+            @include breakpoint-up(large){
+                font-size: 1.2rem;
+            }
+        }
+ 
+    }
+    .swiper{
+        @include breakpoint-up(large){
+            padding-top: 2em;
+        }
+     
+        &-slide{
+            .card{
+                padding: 0;
+                margin: 0;
+                &__footer{
+                    .writer{
+                        @include breakpoint-up(large){
+                            display: -webkit-box;
+                            display: -ms-flexbox;
+                            display: flex; 
+                            gap: 1em;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

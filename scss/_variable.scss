@@ -1,0 +1,31 @@
+
+$primary: #F2BD57;
+$secondary:#000;
+$pm-font:'Raleway', sans-serif;
+$sec-font:'Inter', sans-serif;
+$bg-lit: #FFF7EA;
+$pm-lite: #FFF1D7;
+$hash-text: #525252;
+
+
+$pm-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+$pm-transition: 200ms all linear;
+$pm-img:invert(33%) sepia(94%) saturate(1140%) hue-rotate(188deg) brightness(85%) contrast(102%);
+$sec-img:invert(11%) sepia(100%) saturate(6004%) hue-rotate(26deg) brightness(98%) contrast(134%);
+$darkBlue: hsl(233, 26%, 24%);
+$limeGreen: hsl(136, 65%, 51%);
+$brightCyan: hsl(192, 70%, 51%);
+$grayishBlue: hsl(233, 8%, 62%);
+$lightGrayishBlue: hsl(220, 16%, 96%);
+$veryLightGray: hsl(0, 0%, 98%);
+$white: hsl(0, 0%, 100%);
+
+// Font Sizes
+$font-sm: 1rem; // 16px
+$font-med: 1.125rem; // 18px
+$font-lg: 1.25rem;
+$font-xlg: 3.25rem;
+
+//transition
+$ts-opacity: opacity 300ms ease-in-out;
+$ts-all: all 300ms ease-in-out;

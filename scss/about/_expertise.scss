@@ -1,0 +1,63 @@
+.expertise{
+    .section-head{
+        text-align: center;
+        margin-bottom: 1em;
+   
+    }
+    .bg-lite{
+        padding: 2em 0;
+        @include breakpoint-up(large){
+            padding: 4em 0;
+
+        }
+    }
+    &__card{
+        @include breakpoint-down(small){
+            &:last-child{
+                grid-column: span 2 ;
+                width: 48%;
+                margin: 0 auto;
+            }
+        }
+        @include breakpoint-up(large){
+            position: relative;
+        }
+        h4{
+            font-size: 0.8rem;
+            font-family: $sec-font;
+            color: #ffffff;
+            padding: 0.5em;
+            font-weight: normal;
+            min-height: 3.2em;
+            @include breakpoint-up(large){
+                font-size: inherit;
+                width: -webkit-fit-content;
+                width: -moz-fit-content;
+                width: fit-content;
+                position: absolute;
+                bottom: -5%;
+                right: 0;
+                padding: 1em 2em;
+                border-radius: 20.5px 0px 0px 0px;
+            }
+        }
+        img{
+            -o-object-fit: cover;
+               object-fit: cover;
+            width: 100%;
+        }
+        &:nth-child(even) h4{
+            background-color: $secondary;
+        }
+        &:nth-child(odd) h4{
+            background-color: $primary;
+        }
+        @include breakpoint-up(xxlarge){
+            &:last-child{
+                grid-column: span 4;
+                width: 23%;
+                margin: 0 auto;
+            }
+        }
+    }
+}

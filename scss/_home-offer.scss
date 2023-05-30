@@ -1,0 +1,46 @@
+.home-offer{
+    @include breakpoint-up(medium){
+        margin-bottom: 1em;
+    }
+    @include breakpoint-up(large){
+        margin: 3em 0;
+    }
+    @include breakpoint-up(xxlarge){
+        margin-top: 1em;
+        margin-bottom: 7em;
+    }
+    .offer-grid{
+        display: flex;
+        gap: 0.1em;
+        @include breakpoint-up(large){
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(100px,1fr));
+            gap: 2em;
+            margin-bottom: 2em;
+        }
+        img{
+            margin-bottom: 1em;
+            -o-object-fit: cover;
+               object-fit: cover;
+            width: 100%;
+        }
+     
+    }
+    .main-offer{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        padding-bottom: 2em;
+       
+        img{
+            -o-object-fit: cover;
+               object-fit: cover;
+            width: 100%;
+        }
+    }
+
+    
+}

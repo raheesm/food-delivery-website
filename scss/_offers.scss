@@ -1,0 +1,54 @@
+.spl-offer {
+    @include breakpoint-up(large){
+       margin-top: 2em;
+    }
+    &__div{
+        @include breakpoint-up(large){
+            padding: 1em;
+            margin-bottom: 2em;
+        }
+    }
+  .swiper {
+    width: 100%;
+    height: 100%;
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      img {
+        display: block;
+        width: 100%;
+        height: 13ch;
+        -o-object-fit: cover;
+           object-fit: cover;
+        @include breakpoint-up(large){
+          height: 18em;
+        }
+        @include breakpoint-up(xxlarge){
+          height: 25em;
+        }
+      }
+    }
+        .swiper-button-next, .swiper-button-prev{
+            background-color: #fff;
+            border-radius: 50%;
+            width: 1.5em;
+            height: 1.5em;
+            &::after{
+                font-size: 1rem;
+                font-weight: 900;
+                color: $primary;
+            }
+        }
+    
+  }
+}

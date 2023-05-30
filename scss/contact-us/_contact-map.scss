@@ -1,0 +1,22 @@
+.contact-map{
+    .section-head{
+        h3{
+            font-size: 0.9rem;
+        }
+    }
+    .map{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        iframe{
+           @include breakpoint-up(large){
+            width: 70%!important;
+            height: 25em;
+            margin-bottom: 5em;
+           }
+        }
+    }
+}
